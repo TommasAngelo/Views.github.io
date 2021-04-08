@@ -1,0 +1,255 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    block-size: 100% 100%;
+}
+*,*:before,*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{ outline: none;}
+a:focus,a:active{ outline: none;}
+nav,footer,header,aside{display: block}
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit}
+input::-ms-clear{ display: none;}
+button{ cursor: pointer;}
+button::-moz-focus-inner{ padding: 0; border: 0;}
+a, a:visited{ text-decoration: none;}
+a:hover{ text-decoration: none;}
+ul li { list-style: none;}
+img{ vertical-align: top;}
+h1,h2,h3,h4,h5,h6{ font-size: inherit;font-weight: 400;}
+
+#Body { /* Задний фон */
+    background: url('img/bg.jpg') 0 0/100%auto no-repeat;
+    z-index: 1;
+    background-attachment: fixed; /*Задний фон картинки фиксированный*/
+    min-height: 100%;
+    height: 100%;
+}
+#Alfa { /* Цвет и прозрачность альфа канала заднего фона */
+    background: rgba(192, 192, 192, 0.7);
+    width: 100%;
+    z-index: 1;
+    min-height: 100%;
+    position: relative;
+    
+}
+#Header { /* Шапка */
+    width: 100%; /*Ширина блока*/
+    height: 20vh; /*Высота блока*/
+    background: rgba(24,181,164,0.0); /*задний фон блока*/
+    z-index: 1;
+    border-radius: 10px; /*Закругление углов*/
+    position: relative;
+}
+.leftHeader { /* Левая сторона шапки */
+    width: 30%; /*Ширина блока*/
+    float: left; /*Высота блока*/
+}
+.Logo { /* Логотип */
+    float: left; /*Прижатие к левой стороне*/
+    width: 20vh; /*Ширина блока*/
+    height: 20vh; /*Высота блока*/
+    background: url('img/Logo.jpg') center no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 5px -5px 10px 5px black; 
+    border-radius: 10%;
+}
+.Conntakts { /* Контакты */
+    font-size: 30px;
+    text-align: center;
+    padding: 5vh 0px 0px 0px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.Conntakts a {
+    color: black;
+}
+.Conntakts a:hover {
+    text-shadow: 10px -5px 10px rgba(0,0,0, 0.7);
+}
+
+.rightHeader { /* Правая сторона шапки */
+    border-radius: 10px;
+    float: right; /*прижатие к правой стороне*/
+    width: 70%; /*Ширина блока*/
+    height: 100%;/*Высота блока*/
+}
+
+.Menu {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5% 5px 5px 5px;
+    
+}
+    .Menu > li {
+        display: inline-block;
+        box-shadow: 0px 5px 10px 5px black;
+        position: relative;
+        background: rgba(255, 215, 0, 0.7);
+        border-radius: 20px;
+        padding: 5px 5px 5px 5px;
+        margin: 0 5px 0 5px;
+    }
+.Menu > li a {
+
+    border-radius: 10px;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 1);
+    margin: 20px;
+    padding: 0px 5px 0px 5px;
+}
+    .Menu > li > ul {
+        position: absolute;
+        display: none;
+    }
+.Menu > li > ul a {
+    font-size: 25px;
+
+}
+        .Menu > li:hover > ul {
+            display: block;
+            margin: 5px 0px 0px 0px;
+            box-shadow: 0px 5px 10px 5px black;
+            background: rgba(244, 201, 164, 1);
+            padding: 0px 0px 20px 0px;
+            text-align: left;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+.Menu > li:hover{
+    box-shadow: 5px 5px 10px 5px black;
+        padding: 0% 5px 5px 5px;
+    background: rgba(244, 201, 164, 1);
+    border-radius: 20px;
+}
+.Menu > li > ul a:hover {
+    background: rgba(192, 192, 192, 1);
+    font-size: 27px;
+    padding: 1px 5px 1px 5px;
+    border-radius: 15px;
+    
+}
+#Main {
+    min-height: 100vh;
+    padding: 0px 0 100px 0;
+}
+.centerMain {
+    color: black;
+    width: 100%;
+    padding: 100px 0 100px 0;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+    .centerMain img {
+        width: 50%;
+        box-shadow: black;
+        box-shadow: 5px 5px 10px 5px black;
+    }
+.centerMain a {
+    color: black;
+}
+.centerMain a:hover {
+    color: black;
+    text-shadow: 10px -5px 10px rgba(0,0,0, 0.7);
+}
+
+.rightMain{ /* Основная часть */
+    min-height: 100vh;
+    width: 70%;
+    background: rgba(244,201,164,0.0);
+    left: 35%;
+    padding: 100px 20px 80px 40px;
+    z-index: 1;
+    float: right;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+
+}
+#Aside { /* Боковая часть */
+    width: 30%;
+    min-height: 50vh;
+    background: rgba(514,181,164,0.0);
+    z-index: 1;
+    float: left;
+    border-radius: 10px;
+    padding-bottom: 80px;
+}
+.leftList { /* Настройки бокового списка слева */
+    margin: 20px 20px 20px 20px;
+    font-size: 35px;
+}
+
+.leftList:hover { /*Настройки бокового списка слева при наведении*/
+    color: crimson;
+    cursor: pointer; /*Вид курсора*/
+}
+
+.leftList:hover:before { /*При наведении.Обращение к псевдоэлементу before*/
+    background: red;
+}
+
+
+
+.leftList:before { /*До указанного элеменат*/
+    content: ''; /*Обязательное свойство,но может быть пустым*/
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    display: inline-block;
+    margin: 0px 20px 2px 0px;
+}
+#Footer { /* Нижняя часть сайта */
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0px 5px 10px 5px black;
+    z-index: 1;
+    
+    border-radius: 5px;
+}
+.footerAdress {
+    display: inline-block;
+    width: 50%;
+    font-size: 17px;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    target: _b
+}
+.footerAdress a {
+    color: white;
+}
+.footerTel {
+    display: inline-block;
+    width: 50%;
+    font-size: 17px;
+    float: left;
+    padding: 10px;
+    text-align: center;
+}
+.footerTel a {
+    color: white;
+}
